@@ -1,7 +1,7 @@
-package org.killeenisd;
-
 import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -62,7 +62,7 @@ public class JStrokeServer extends Object {
 			file.createNewFile();
 		FileWriter fw = new FileWriter(file, true);
 		fw.write(new Date(System.currentTimeMillis()) + ": " + buffer);
-		fw.write("\n\n");
+		fw.write("\r\n");
 		fw.close();
 	}
 

